@@ -24,7 +24,7 @@ Struktura systemu:
 6. Każda funkcja posiada opisany proces, jaki jest potrzebny do stworzenia kanapki
 7. Po zakończeniu procesu użytkownik dostaje informacji o możliwości odebrania kanapki
 
-Scenariusze testów:
+Problemy, które napotkał program:
 1. Próba wpisania dowolnej wartości do programu (innej niż powinna być):
 - Wpisanie dowolnej wartości innej niż dozwolona, spowodowało wyjątek ErroKey, aby mu zapobiec została wprowadzona obsługa wyjątków
 2. Problem z pozycji numer 1, powoduje problemy w dalszej części programu:
@@ -36,3 +36,12 @@ Scenariusze testów:
 Wykorzystane bilbioteki:
 1. Enum
 2. Time
+3. Unittest
+
+Scenariusze testów:
+1. Akceptacyjny:
+- Przeprowadzono symulację użytkownika, program nie wykazał błędu. Otrzymałem komunikat Ran 1 test in 29.430s OK
+2. Jednostkowy:
+- Przeprowadziłem testy jednostkowe, których zadaniem było sprawdzenie funkcji, a konretnie zmiennej takiej jak czas ogrzewania
+  Testy zostały przeprowadzone dla każdej kanapki, gdyby czas się nie zgadzał, mogłoby to skutkować przypaleniem kanapek
+

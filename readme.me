@@ -13,3 +13,26 @@ Działenie Programu:
 4. Po zakończeniu użytownik jest informowany o możliwości odbioru
 
 Struktura systemu:
+1. Program zaczyna się od wywołania Fukncji main()
+2. Do zmiennej builders przypisujemy literę do odpowiedniej klasy np: t = TraditionSanwich
+3. Następnie wykonujemy pętle, która wykonuje się do czasu gdy zmienna valid_input jest fałszywa, dzięki temu mamy pewność, 
+   Że program nie zostanie przerwany po pierszej próbie.
+4. W pętli jest odniesienie do funkcji def validate_style(builders), której zadaniem jest pobranie od użytkownika zmiennej,
+   Dzięki dodanej pętli oraz obsłudze wyjątków, program w przypadu nieprawidłowej informacji, nie spowoduje błedów
+5. Następnie wywołuje się klasa Waiter(), której zadaniem jest wywowałanie odpowiedniej klasy (według danych które podał użytkownik)
+   A następnie wywołanie poszczególnych funkcji tej klasy, 
+6. Każda funkcja posiada opisany proces, jaki jest potrzebny do stworzenia kanapki
+7. Po zakończeniu procesu użytkownik dostaje informacji o możliwości odebrania kanapki
+
+Scenariusze testów:
+1. Próba wpisania dowolnej wartości do programu (innej niż powinna być):
+- Wpisanie dowolnej wartości innej niż dozwolona, spowodowało wyjątek ErroKey, aby mu zapobiec została wprowadzona obsługa wyjątków
+2. Problem z pozycji numer 1, powoduje problemy w dalszej części programu:
+- Jeśli użytkownik wprowadzi nie prawidłową wartość (tak jak opisałe w pkt. 1), program nie może przejść do kolejnego etapu
+  Nie mogę wybrać za użytkownika kanapki jaką by chciał kupić, więc musze go ponownie zapytać i poinformować o umyślnym/przypadkowym błędzie
+  Dlatego zastosowałem pętle while, która bedzie próbowała odpowiednio przetworzyć wartość użytkownika, jeśli się uda, petla zostanie przerwana
+  A pozostały kod bedzie kontynuowany, jeśli sie nie uda program próbuje ponownie.
+  
+Wykorzystane bilbioteki:
+1. Enum
+2. Time
